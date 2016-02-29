@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My notes</title>
+    </head>
+    <body ng-app="myNoteApp">
+        <div ng-controller="myNoteCtrl">
+            <select ng-model="languages.current" ng-options="key as value for (key, value) in languages.available"></select>
+            <h2 translate>My Note</h2>
+            <p>
+                <textarea ng-model="message" cols="40" rows="10"></textarea>
+            </p>
+            <p>
+                <button ng-click="save()" translate>Save</button>
+                <button ng-click="clear()" translate>Clear</button>
+            </p>
+            <p>Number of characters left: <span ng-bind="left()"></span></p>
+        </div>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-gettext/dist/angular-gettext.js"></script>
+        <script src="js/myNoteApp.js"></script>
+        <script src="js/myNoteController.js"></script>
+    </body>
+</html>
