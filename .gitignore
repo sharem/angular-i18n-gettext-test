@@ -3,6 +3,11 @@ logs
 *.log
 npm-debug.log*
 
+# Directories to be ignored 
+#(related with the creation of the translation files - both POT/PO & translation JSONs-)
+languages
+po
+
 # Runtime data
 pids
 *.pid
