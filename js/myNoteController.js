@@ -1,5 +1,6 @@
 app.controller("myNoteCtrl", function($scope, gettextCatalog) {
     $scope.message = "";
+    $scope.savedNotes = 0;
     $scope.left  = function() {return 100 - $scope.message.length;};
     $scope.clear = function() {$scope.message = "";};
     $scope.save  = function() {
